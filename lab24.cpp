@@ -5,15 +5,20 @@ int main ()
 {
 	float a, c, *p, b, *pmax, *pmin, *p3, d[5], *p33, s=0;
 	cout<<"chastuna 1:"<<endl;
+	cout<<"Input a: ";
 	cin>>a;
+	cout<<endl<<"Input c: ";
 	cin>>c;
+	cout<<endl;
 	p=&a;
 	*p=*p*3+c;
 	p=&c;
 	cout<<&a<<endl<<&c<<endl<<&p<<endl<<p<<endl<<a<<endl<<c<<endl<<*p<<endl;
 	
 	cout<<"chastuna 2:"<<endl;
+	cout<<"Input a,b,c: ";
 	cin>>a>>b>>c;
+	cout<<endl;
 	pmax=&a;
 	pmin=&a;
 	if(*pmax<b)
@@ -35,11 +40,13 @@ int main ()
 	cout<<"Max: "<<*pmax<<" "<<&pmax<<endl;
 	cout<<"Min: "<<*pmin<<" "<<&pmin<<endl;
 	cout<<"chastuna 3:"<<endl;
+	cout<<"Input a,b,c,d: ";
 	p3=&d[0];
 	for(int i=0;i<4;i++)
 	{
 		cin>>p3[i];
 	}
+	cout<<endl;
 		for(int i=0;i<4;i++)
 	{
 		cout<<p3[i]<<" ";
@@ -78,7 +85,7 @@ int main ()
 	{
 		if(p3[i]<*pmax && p3[i]>*pmin)
 		{
-			cout<<p3[i];
+			cout<<p3[i]<<" ";
 		}
 	}
 	
