@@ -14,7 +14,7 @@ int main ()
 	{
 		cin>>p3[i];
 	}
-		for(int i=0;i<n;i++)
+	for(int i=0;i<n;i++)
 	{
 		cout<<p3[i]<<" ";
 	}
@@ -34,7 +34,14 @@ int main ()
 		}
 	}
 	cout<<endl;
-	cout<<"Min parne: "<<*pmin;
+		if(*pmin%2==0)
+		{
+			cout<<"Min parne: "<<*pmin<<endl;
+		}
+		if(*pmin%2!=0)
+		{
+			cout<<"Nemae parnix"<<endl;
+		}
 	cout<<endl;
 	cout<<"----------------------------------------"<<endl;
 	cout<<"Chastina 2: "<<endl;
@@ -87,13 +94,12 @@ int main ()
 		cout<<p3[i]<<" ";
 	if(p3[i]%5==0)
 	{
-		while(i!=o)
+		for(j=i+1;j<n;j++)
 		{
-			o--;
-			s=s+p3[j-1];
-		}
-		o=n;
+			s=s+p3[j];
+	}
 		cout<<s<<" ";
+		s=0;
 	}
 }
 cout<<endl;
