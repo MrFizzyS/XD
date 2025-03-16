@@ -169,5 +169,25 @@ for(i=0;i<n;i++)
    cout<<"Seredne arif dodatnix = "<<s/sc<<endl;
    cout<<"Seredne arif videmnix = "<<k/kc<<endl;
    cout<<"kilkist 0 = "<<v<<endl;
+   cout<<"chastina 5:"<<endl;
+   for(int i=0;i<n;i++)
+   {
+   for(int j=0;j<n;j++)
+   if(i==j)
+   {
+   	if(a[i][j]<a[i+1][j+1])
+   	{
+   	swap(a[i][j],a[i+1][j+1]);
+   }
+   }
+}
+   for(int i=0;i<n;i++)
+   {
+   	cout<<endl;
+   for(int j=0;j<n;j++)
+   {
+   cout<<a[i][j]<<" ";
+}
+}
 return 0;
 }
