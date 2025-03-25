@@ -7,8 +7,8 @@ int main()
 	cin>>n;
 	cout<<"Input m: ";
 	cin>>m;
-	int *a=new int[n];
-	int *b=new int[m];
+	float *a=new float[n];
+	float *b=new float[m];
 	cout<<"Vvedit masuv a:"<<endl;
 	for(int i=0;i<n;i++)
 	{
@@ -22,14 +22,14 @@ int main()
 	 int ca=0,cb=0;
 	 for(int i=0;i<n;i++)
 	{
-		if(a[i]%3!=0)
+		if(int(a[i])%3!=0)
 		{
 			ca++;
 		}
 	 } 
 	 	 for(int j=0;j<m;j++)
 	{
-		if(b[j]%3!=0)
+		if(int(b[j])%3!=0)
 		{
 			cb++;
 		}
