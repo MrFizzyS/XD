@@ -17,7 +17,8 @@ int* p(int* a, int size, int count, ...)
     return b;
 }
 using namespace std;
-int main(){
+int main()
+{
     int n,i1,i2,l=0;
     int *a = new int[15];
     int *a1 = new int[15];

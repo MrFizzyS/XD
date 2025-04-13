@@ -1,8 +1,5 @@
 #include <iostream>
 using namespace std;
-
-// Функція для обчислення площі поверхні паралелепіпеда
-// З параметрами за замовчуванням для ширини та висоти
 float p(float length, float width=2.0, float height=3.0) 
 {
     return 2*(length*width+length*height+width*height);
