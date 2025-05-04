@@ -27,7 +27,7 @@ public:
 	void setyear(int year);
 	void setsalary(float sal);
 
-	void calculatebonus(int thisyear);
+	int calculatebonus(int thisyear);
 	int getexperience(int thisyear);
 };
 

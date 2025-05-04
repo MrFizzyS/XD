@@ -62,21 +62,25 @@ void employee::setsalary(float sal)
 	salary = sal;
 }
 
-void employee::calculatebonus(int thisyear) 
-{
-	int experience;
-	experience = thisyear - hireyear;
-	if (experience < 10)
-		bonus = salary * 0.10;
-	else if (experience <= 20)
-		bonus = salary * 0.25;
-	else
-		bonus = salary * 0.40;
-}
 
 int employee::getexperience(int thisyear) 
 {
 	return thisyear-hireyear;
+}
+int employee::calculatebonus(int thisyear) 
+{
+	if (getexperience(thisyear)<=10)
+	{
+		return bonus = salary * 0.10;
+	}
+	else if (getexperience(thisyear)<=20)
+	{
+		return bonus = salary * 0.10;
+	}
+	if(getexperience(thisyear)>=25)
+	{
+		return bonus = salary * 0.40;
+	}
 }
 
 void sortemploys(employee a[], int size, int thisyear) 

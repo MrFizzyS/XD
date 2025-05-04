@@ -7,9 +7,11 @@ class Matrix
 	public:
 		int size;
     int** data;
-        Matrix(int n) : size(n) {
+        Matrix(int n) : size(n) 
+		{
         data = new int*[size];
-        for (int i = 0; i < size; ++i) {
+        for (int i = 0; i < size; ++i) 
+		{
             data[i] = new int[size];
         }
     }
