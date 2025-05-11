@@ -31,13 +31,13 @@ public:
 	int getexperience(int thisyear);
 	
 	
-	friend void departmentStats(const employee* employees, int size);
+	friend void departmentStats(employee a[], int size);
 	friend class Vacation;
 };
 
 float calculatexperience(employee a[], int size, int thisyear);
 void sortemploys(employee a[], int size, int thisyear);
-
+void departmentStats(employee a[], int size);
 class Vacation {
 private:
 	employee prac;

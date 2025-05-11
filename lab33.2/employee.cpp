@@ -116,19 +116,21 @@ void Vacation::calculateDuration(int thisyear) {
     
 }
 
-void departmentStats(const employee* employees, int size) {
+void departmentStats(employee a[], int size) {
     int count = 0;
     float totalSalary = 0;
     
     for (int i = 0; i < size; i++) {
         count++;
-    }
+        totalSalary=totalSalary+a[i].getsalary();
     
     if (count > 0) {
         cout << "Department statistics:" << endl;
         cout << "Number of employees: " << count << endl;
         cout << "Average salary: " << (totalSalary / count) << endl;
+        cout<<"Dep: "<<a[i].getdepartment()<<" Workers: "<<a[i].getsurname()<<" Total salary: "<<totalSalary<<endl;
     }
+}
 }
 
 Vacation::Vacation() {
