@@ -62,9 +62,6 @@ public:
 
     void findOccurrences(const string& filename) {
         ifstream file(filename);
-        if (!file.is_open()) {
-            throw runtime_error("Could not open file: " + filename);
-        }
 
         string line;
         size_t globalPos = 0;
@@ -88,10 +85,6 @@ public:
     void processFile(const string& inputFile, const string& outputFile) {
         ifstream in(inputFile);
         ofstream out(outputFile);
-        
-        if (!in.is_open() || !out.is_open()) {
-            throw runtime_error("Could not open files");
-        }
 
         string content((istreambuf_iterator<char>(in)), istreambuf_iterator<char>());
         in.close();
@@ -112,9 +105,6 @@ public:
 
 void processPartE() {
     ifstream z1File("z1.txt");
-    if (!z1File.is_open()) {
-        throw runtime_error("Could not open z1.txt");
-    }
 
     int wordCount = 0;
     string line;
@@ -127,9 +117,6 @@ void processPartE() {
     }
     z1File.close();
     ifstream tFile("t.txt");
-    if (!tFile.is_open()) {
-        throw runtime_error("Could not open t.txt");
-    }
 
     vector<string> s1Words;
     string tLine;
@@ -171,9 +158,6 @@ void processPartE() {
         sortedS3.pop_back(); 
     }
     ofstream z4File("z4.txt");
-    if (!z4File.is_open()) {
-        throw runtime_error("Could not create z4.txt");
-    }
 
     z4File << "s1 (words from t.txt):" << s1 << " ";
     z4File << "s2 (copy of z1.txt):" << s2 << " ";
@@ -274,7 +258,7 @@ int main()
         processor.findOccurrences("z1.txt");
         processor.processFile("z1.txt", "z3.txt");
 
-        cout << "Processing completed. Results saved to z3.txt" << endl;
+        cout << "saved to z3.txt" << endl;
     } catch (const exception& e) {
         cerr << "Error: " << e.what() << endl;
     }

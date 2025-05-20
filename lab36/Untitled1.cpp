@@ -118,7 +118,7 @@ public:
 int main()
 {
 	try {
-        Driver driver("Anton", 30, 8, "BC1234BC", "Volkswagen", 2015, 150000, 2018, false);
+        Driver driver("Anton", 10, 8, "BC1234BC", "Volkswagen", 2015, 150000, 2018, false);
         driver.displayInfo();
         cout << "Comparing car age and driving experience:" << endl;
         driver.compareCarAgeWithExperience(2025);
@@ -132,7 +132,7 @@ int main()
             cerr << "Error: " << e.what() << endl;
         }
         cout << "Updating data with correct information" << endl;
-        driver.setAllData("Anton", 32, 10, "BC1234бя", "Volkswagen", 2015, 160000, 2018, true);
+        driver.setAllData("Anton", 32, 10, "BC1234BC", "Volkswagen", 2015, 160000, 2018, true);
         driver.displayInfo();
         
     }
